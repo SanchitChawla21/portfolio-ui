@@ -1,0 +1,51 @@
+
+
+<form [formGroup]="tradeForm" class="buysell-container">
+  <mat-form-field appearance="fill">
+    <mat-label>Buy/Sell</mat-label>
+    <mat-select [formControl]="tradeOptionControl" name="tradeType">
+      <mat-option *ngFor="let c of tradeOptions" [value]="c">
+        {{ c }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Ticker</mat-label>
+
+    <input
+      matInput
+      [formControl]="tickerNameControl"
+      name="ticker"
+      placeholder="Enter Ticker"
+    />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Quantity</mat-label>
+
+    <input
+      type="number"
+      matInput
+      [formControl]="quantityControl"
+      name="quantity"
+      placeholder="Enter Quantity"
+    />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Price</mat-label>
+
+    <input
+      type="number"
+      matInput
+      [formControl]="priceControl"
+      name="price"
+      placeholder="Enter Price"
+    />
+  </mat-form-field>
+  <button mat-raised-button color="primary" (click)="onSubmit()">Submit</button>
+
+</form>
+<p> {{message}}</p>
+<button style="margin: 10px; background-color: lightgray;" mat-raised-button  (click)="onRefresh()">Refresh</button>

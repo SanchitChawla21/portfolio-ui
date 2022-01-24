@@ -1,0 +1,15 @@
+.buysell-container {
+
+      display: grid;
+      grid-template-columns: auto auto auto auto auto auto;
+      background-color: white;
+      padding: 10px;
+      grid-gap: 10px;
+      justify-content: start;
+      align-items: center;
+
+}
+
+
+
+

@@ -1,0 +1,66 @@
+
+
+<p>
+  <mat-toolbar color="primary">
+    <span>ArrowStreet--Manage Portfolio Dashbaord By Sanchit </span>
+  </mat-toolbar>
+</p>
+
+<!-- <div class= "grid-container">
+<div class="steps">
+  <p>
+    <b> Steps to Play: -</b>
+    <li>Please select the <b>'Start & End'</b> location by clicking on any cell.</li>
+    <li>
+      Drop down will open with three options - <b style="color: orangered;">'Start'</b> , <b style="color: green;">'End'</b> , <b style="color: grey;">'Block'</b>, select
+      option accordingly.
+    </li>
+    <li>
+      Once done, please click on <b style="color:purple">'Find Path'</b> button. Shortest path display
+      in <b style="color: green;">'Green'</b> color.
+    </li>
+    <li>Error message will appear if <b>'No Path' </b> available.</li>
+    <li>Click on <b>'Reset'</b> button to play again--Enjoy!!</li>
+  </p>
+
+  <p>
+    <B><I>**To accomplish this task I have used Breadth first approach(BFS) with Queue structure.. </I></B>
+  </p>
+</div>
+
+<div class="options">
+<button mat-raised-button color="primary" >
+  Find Path
+</button>
+<button class="margin"  mat-raised-button >Reset</button>
+</div>
+
+<div class="matrix"> -->
+
+
+<app-buyorsell (valueChange)='refreshPortfolio()'></app-buyorsell>
+
+<mat-card>
+<p> <b>Portfolio Name :{{portfolioDetails?.portfolioName}} </b></p>
+<p> <b>Current Value: {{portfolioDetails?.portfolioCurrentValue | currency}}  </b></p>
+</mat-card>
+<ag-grid-angular
+  #agGrid
+  style="width: auto; height: 600px"
+  class="ag-theme-alpine"
+  [rowData]="rowData"
+  [columnDefs]="columnDefs"
+  [defaultColDef]="defaultColDef"
+  [animateRows]="true"
+  [enableCellChangeFlash]="true"
+  (gridReady)="onGridReady($event)"
+>
+</ag-grid-angular>
+
+<!-- </div>
+
+<div class="code">
+
+</div>
+
+</div> -->
